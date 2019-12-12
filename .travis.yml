@@ -1,0 +1,13 @@
+sudo: false
+language: scala
+os:
+  - osx
+scala:
+  - 2.12.10
+node_js:
+  - "13"
+jdk:
+  - openjdk9
+script:
+  - npm install
+  - sbt ";clean;++$TRAVIS_SCALA_VERSION;testSuite2_12/test"
